@@ -1,11 +1,10 @@
 <?php require_once "inc/header.php";
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user = new User();
-    $user = $user->register($_POST);
-    if ($user == true) {
-        print_r($user);
-    } else {
-        echo "failed register";
+    $newUser = new User();
+    $user = $newUser->register($_POST);
+    if ($user == 'success') {
+        echo "success";
     }
 }
 
@@ -17,6 +16,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     <div class="card-body">
         <form action="" method="post">
+            <?php
+            if (isset($user) and is_array($user)) {
+                foreach ($user as $error) {
+            ?>
+                    <div class="alert alert-danger" role="alert"><?php echo $error; ?></div>
+            <?php
+                }
+            }
+            ?>
             <div class="form-group">
                 <label for="" class="text-white">Enter Username</label>
                 <input type="name" name="name" class="form-control">

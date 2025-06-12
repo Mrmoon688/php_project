@@ -18,10 +18,21 @@ class User
             if (empty($request['password'])) {
                 $error[] = 'password is required';
             }
+
+            // check user exit
+            $userEmail = DB::table('users')->where('email', $request['email'])->getOne();
+            if ($userEmail) {
+                $error[] = 'email already exist';
+            }
+
             if (count($error)) {
                 return $error;
             } else {
-                return true;
+                // insert User data
+
+                // session user_id
+                //
+                return 'success';
             }
         }
     }
