@@ -1,7 +1,7 @@
 <?php
-require_once "core/autoload.php";
+require_once 'core/autoload.php';
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>

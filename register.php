@@ -1,15 +1,4 @@
-<?php require_once "inc/header.php";
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $newUser = new User();
-    $user = $newUser->register($_POST);
-    if ($user == 'success') {
-        echo "success";
-    }
-}
-
-?>
-
+<?php require_once 'inc/header.php'; ?>
 <div class="card card-dark">
     <div class="card-header bg-warning">
         <h3>Register</h3>

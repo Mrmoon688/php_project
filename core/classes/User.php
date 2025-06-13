@@ -29,9 +29,13 @@ class User
                 return $error;
             } else {
                 // insert User data
-
+                $user = DB::create('users', [
+                    'name' => $request['name'],
+                    'email' => $request['email'],
+                    'password' => password_hash($request['password'], PASSWORD_BCRYPT),
+                ]);
                 // session user_id
-                //
+                $_SESSION['users_id'] = $user->id;
                 return 'success';
             }
         }
