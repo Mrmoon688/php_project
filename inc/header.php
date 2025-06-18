@@ -14,8 +14,6 @@ require_once 'core/autoload.php';
     <!-- Optional theme -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
     <title>Blog Project</title>
-
-
 </head>
 
 <body>
@@ -27,27 +25,28 @@ require_once 'core/autoload.php';
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a href="#" class="nav-link">Home<span class="sr-only">(current)</span></a>
+                    <a href="#" class="nav-link text-white-50">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Articles</a>
+                    <a href="#" class="nav-link text-white-50">Articles</a>
                 </li>
+                <!--  -->
+
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
-                    <div class="dropdown-menu" arial-labelledby="navbarDropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
+                    <ul class="dropdown-menu" arial-labelledby="navbarDropdown">
                         <a href="#" class="dropdown-item">Login</a>
                         <a href="#" class="dropdown-item">Register</a>
                         <a href="#" class="dropdown-item">Welcome User</a>
-                    </div>
+                    </ul>
                 </li>
                 <li class="nav-item ml-5">
                     <a href="#" class="nav-link btn btn-sm btn-warning">
                         <i class="fas fa-plus">Create Article</i>
                     </a>
                 </li>
-
             </ul>
-            <form action="" class="form-inline my-2 my-lg-0">
+            <form action="" class="my-2 my-lg-0 d-flex">
                 <input type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
