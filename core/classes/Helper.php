@@ -1,4 +1,5 @@
-<?php class Helper
+<?php
+class Helper
 {
     public static function redirect($page)
     {
