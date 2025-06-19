@@ -31,8 +31,8 @@ class User
 
                 //inset data into database
                 $user = DB::create('users', [
-                    'name' => $request['name'],
-                    'email' => $request['email'],
+                    'name' => Helper::filter($request['name']),
+                    'email' => Helper::filter($request['email']),
                     'password' => password_hash($request['password'], PASSWORD_BCRYPT)
                 ]);
                 //session _userid
