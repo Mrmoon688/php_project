@@ -1,6 +1,9 @@
 <?php
 require_once 'inc/init.php';
 
+if (User::auth()) {
+    Helper::redirect('index.php');
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //print_r($_POST); // $_POST['name'] // $_POST['email'] $_POST['password']
     $user = new User();

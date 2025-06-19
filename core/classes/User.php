@@ -1,6 +1,15 @@
 <?php
 class User
 {
+    //Authentication
+    public static function auth()
+    {
+        if (isset($_SESSION['user_id'])) {
+            $user_id = $_SESSION['user_id'];
+            return DB::table('users')->where('id', $user_id)->getOne();
+        }
+        Helper::redirect('login.php');
+    }
     public function register($request)
     { //$_POST method  အားလုံးကို $request[array]  အနေနဲ့ လက်ခံလိုက်တယ်
         // print_r($request);
